@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Uttarakhand Culture</title>
+  <link rel="stylesheet" href="style.css">
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    .container {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: #1e3c72;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #eee;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="./index.html" class="logo">Translator</a>
+  <div class="nav-links">
+    <a class="ref-link" href="./index.html">Home</a>
+    <a class="ref-link" href="./learn.html">Learn</a>
+    <a class="ref-link" href="./culture.html">Culture</a>
+    <a class="ref-link" href="./team.html">About Us</a>
+  </div>
+</nav>
+
+  <header>
+    <h1>Explore Uttarakhand's Culture</h1>
+    <p>Traditions, Music, Festivals & More</p>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <img src="https://uttarakhandtourism.gov.in/sites/default/files/2022-11/jagarsong.jpg" alt="Folk Music">
+      <div class="card-content">
+        <h3>🎵 Folk Music (Jagar)</h3>
+        <p>Traditional spiritual songs sung to invoke local deities and spirits. A beautiful part of Garhwali & Kumaoni traditions.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://uttarakhandtourism.gov.in/sites/default/files/2022-10/holi.jpg" alt="Festivals">
+      <div class="card-content">
+        <h3>🎉 Festivals</h3>
+        <p>From Harela to Ghee Sankranti, every festival is rooted in nature, agriculture, and spirituality.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://uttarakhandtourism.gov.in/sites/default/files/2022-10/dress.jpg" alt="Traditional Attire">
+      <div class="card-content">
+        <h3>👗 Traditional Attire</h3>
+        <p>Colorful Pichoras, woolen garments, and jewelry reflect the region’s pride and practicality for mountain life.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://uttarakhandtourism.gov.in/sites/default/files/2022-10/mandir.jpg" alt="Architecture">
+      <div class="card-content">
+        <h3>🏛️ Temple Architecture</h3>
+        <p>Wooden carvings and stone temples like Kedarnath and Jageshwar show the divine craftsmanship of Uttarakhand.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://uttarakhandtourism.gov.in/sites/default/files/2022-11/localfood.jpg" alt="Cuisine">
+      <div class="card-content">
+        <h3>🍲 Local Cuisine</h3>
+        <p>Delicacies like Kafuli, Bhatt ki Churkani, and Mandua Roti are nutritious and made with locally grown grains.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Translator App | Celebrating Culture with ❤️
+  </footer>
+
+</body>
+</html>

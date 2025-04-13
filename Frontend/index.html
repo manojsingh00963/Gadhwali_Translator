@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    textarea{
+      width: 95%;
+      padding: 15px;
+      margin-top: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    select{
+      width: 85px;
+      padding: 5px;
+      margin-top: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #021324;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #414141;
+    }
+
+    .input-section,
+    .output-section {
+      margin-bottom: 20px;
+    }
+
+    #output-box {
+      width:95%;
+      margin-top: 10px;
+      padding: 15px;
+      background-color: #e9ecef;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      min-height: 100px;
+    }
+
+    #output-text {
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="./index.html" class="logo">Translator</a>
+    <div class="nav-links">
+      <a class="ref-link" href="./index.html">Home</a>
+      <a class="ref-link" href="./learn.html">Learn</a>
+      <a class="ref-link" href="./culture.html">Culture</a>
+      <a class="ref-link" href="./team.html">About Us</a>
+    </div>
+  </nav>
+
+  <!-- Translator Section -->
+  <div class="container">
+    <h1>Your Translator</h1>
+
+    <!-- Input Section -->
+    <div class="input-section">
+      <label for="input-language">Input Language:</label>
+      <select id="input-language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="gadhwali">Gadhwali</option>
+      </select>
+
+      <textarea id="input-text" placeholder="Enter text here..."></textarea>
+    </div>
+
+    <!-- Output Section -->
+    <div class="output-section">
+      <label for="output-language">Output Language:</label>
+      <select id="output-language">
+        <option value="hi">Hindi</option>
+        <option value="en">English</option>
+        <option value="gadhwali">Gadhwali</option>
+      </select>
+
+      <div id="output-box">
+        <p id="output-text">Translated text will appear here...</p>
+      </div>
+    </div>
+
+    <button id="translate-btn">Translate</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

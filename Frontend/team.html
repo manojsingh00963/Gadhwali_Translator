@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Best Working Team</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1a202c;
+      margin-bottom: 20px;
+    }
+
+    .paragraph {
+      color: #718096;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      background-color: #010f26;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    .button:hover {
+      background-color: #43474d;
+    }
+
+    .team-section {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0 20px 40px;
+    }
+
+    .card {
+      background-color: #fef2f2;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+      width: 250px;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      color: #718096;
+      margin-bottom: 15px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      color: #718096;
+    }
+
+    .social-icons i {
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    .bg-pink {
+      background-color: #fef2f2;
+    }
+
+    .bg-yellow {
+      background-color: #fef9c3;
+    }
+
+    .bg-purple {
+      background-color: #f3e8ff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="./index.html" class="logo">Translator</a>
+    <div class="nav-links">
+      <a class="ref-link" href="./index.html">Home</a>
+      <a class="ref-link" href="./learn.html">Learn</a>
+      <a class="ref-link" href="./culture.html">Culture</a>
+      <a class="ref-link" href="./team.html">About Us</a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container">
+    <h1 class="heading">Our Best Working Team</h1>
+    <p class="paragraph">Effective teams communicate openly, leverage strengths, and embrace diversity for success.</p>
+    <a class="button" href="#">Join Our Team</a>
+
+    <!-- Team Cards -->
+    <div class="team-section">
+      <div class="card bg-pink">
+        <img src="https://placehold.co/100x100" alt="Image of Priya Patel" />
+        <h2>Priya Patel</h2>
+        <p>Co-Founder</p>
+        <div class="social-icons">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+      </div>
+
+      <div class="card bg-yellow">
+        <img src="https://i.pinimg.com/736x/c9/6c/3a/c96c3a772e9c2ee367bfa6f68a793554.jpg" alt="Image of Harsh Monic" />
+        <h2>Nisha Belwal</h2>
+        <p>CEO</p>
+        <div class="social-icons">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+      </div>
+
+      <div class="card bg-purple">
+        <img src="https://placehold.co/100x100" alt="Image of William Foster" />
+        <h2>William Foster</h2>
+        <p>Project Manager</p>
+        <div class="social-icons">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
