@@ -1,39 +1,142 @@
-pip install nltk
+# 🌐 Multilingual Translator (EN ⇄ HI ⇄ GDW)
 
-# The utils.py file is used to correct the structure of translated Hindi sentences to make them grammatically correct.
+A powerful Flask-based API for translating between **English**, **Hindi**, and **Gadhwali** using:
+- 🧠 Word & phrase matching from `translations.csv`
+- 🗣️ Grammar correction with custom NLP logic
+- 🌍 Google Translate fallback (for English ↔ Hindi)
+- 💡 Offline Gadhwali translation & correction support
 
-# Why is it needed?
-# When you translate English to Hindi word by word, the sentence structure may become incorrect.
+---
 
-# 🔴 Example without correction:
+## 🚀 Features
 
-# Input: "I am happy" → Direct word translation: "मैं हूँ खुश" (Incorrect)
+- 🔁 **Bidirectional Translation**:
+  - English ⇄ Hindi
+  - English ⇄ Gadhwali
+  - Hindi ⇄ Gadhwali
 
-# Hindi follows Subject-Object-Verb (SOV) order, so correct sentence: "मैं खुश हूँ"
+- 🧠 **Grammar Correction**:
+  - Rule-based Hindi structure fixer
+  - Gadhwali-specific word order correction via POS tags & fallback rules
 
-# How is utils.py used?
-# It provides the function correct_hindi_structure(sentence), which is used inside app.py to fix grammar after translation.
+- 📦 **Offline & Online Modes**:
+  - Uses local dictionary first
+  - Falls back to Google Translate if needed (EN-HI only)
 
-# How it is used in app.py
-# python
-# Copy
-# Edit
-# from utils import correct_hindi_structure
+- ⚡ **Flask REST API** with `/translate` endpoint
+- 📄 **CSV-driven** dictionary system (`translations.csv`)
 
-# def translate_sentence(sentence):
-#     words = sentence.lower().split()
-#     translated_words = [word_dict.get(word, word) for word in words]  # Word-by-word translation
+---
+
+## 📁 Project Structure
+
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/translator-app
+cd translator-app/backend
+pip install -r requirements.txt
+```
+
+
+## 📌 Requirements (requirements.txt)
+```bash
+text
+Copy
+Edit
+Flask
+flask-cors
+pandas
+stanza
+spacy
+requests
+googletrans==4.0.0-rc1
+gensim
+
+
+```
+
+
+🧠 How It Works
+---------------
+
+1.  User sends text like "i want to go" to /translate
     
-#     translated_sentence = " ".join(translated_words)
+2.  The app tries to match the full phrase from the CSV
     
-#     # Correct Hindi sentence structure using `utils.py`
-#     return correct_hindi_structure(translated_sentence)
-# When is it NOT needed?
-# ✅ If you only translate words without forming full sentences, you don’t need utils.py.
-# ✅ If you manually write correct Hindi sentences in the dataset, then utils.py is not required.
+3.  If not found, it falls back to word-by-word translation
+    
+4.  If target is Gadhwali or Hindi, it applies grammar correction:
+    
+    *   correct\_gadhwali\_structure() for GDW
+        
+    *   correct\_hindi\_structure() for HI
+        
+5.  If English ↔ Hindi and internet is available, it uses Google Translate
+    
+6.  Response is returned as JSON
+    
 
-# Conclusion
-# 📌 If you are translating full sentences, keep utils.py.
-# 📌 If your translation only needs individual words, you can remove utils.py.
+🔄 API Usage
+------------
 
-# Let me know what you want to do! 🚀
+### Endpoint:
+
+```  bashCopyEditPOST /translate   ```
+
+### Request Body (JSON):
+>   jsonCopyEdit{    "text": "i not can go",  
+  "source_lang": "en",   
+   "target_lang": "gadhwali"  }  
+
+### Response:
+
+```bash
+ jsonCopyEdit{  
+"translation": "मि नि जै सकदु", 
+}  
+```
+🧪 Train FastText (Optional)
+----------------------------
+
+If you'd like to train a FastText model on your dataset:
+
+> bashCopyEditpython train_model.py   
+
+This will generate:
+
+*   fasttext\_translator.model
+    
+*   fasttext\_translator.txt
+    
+
+Useful for synonyms, embeddings, and expansion.
+
+📂 How to Add New Words
+-----------------------
+
+Just update translations.csv like this:
+
+EnglishHindiGadhwalieatखानाखाणwantचाहताचौनschoolस्कूलस्कूल
+
+> Add both full phrases and individual words for better matching!
+
+✨ Future Ideas
+--------------
+
+*   Add React frontend
+    
+*   User upload for CSV
+    
+*   Neural model integration
+    
+*   Voice input
+    
+
+<!-- 👨‍💻 Author
+------------
+
+**Manoj Singh**Aspiring full-stack + AI/ML developer🔗 [GitHub](https://github.com/manojsingh00963) -->
